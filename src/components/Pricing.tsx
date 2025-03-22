@@ -53,10 +53,10 @@ const Pricing = () => {
           </fieldset>
         </div>
         <div className="grid md:grid-cols-3 gap-12">
-          {plans.map((plan) => (
+          {plans.map((plan, index) => (
             <Card
-              key={plan.name}
-              className="text-sm border-[1px] border-indigo-700 relative"
+              key={index}
+              className="text-sm border-[1px] border-rose-700 relative shadow-blue"
             >
               <Card.Heading className="bg-indigo-50">
                 <h2 className="text-rose-700 text-base uppercase tracking-wider">
@@ -67,7 +67,10 @@ const Pricing = () => {
                     ? plan.prices.monthly
                     : plan.prices.annually}
                   {plan.name !== "Basic" && (
-                    <span className="text-base text-rose-700 ml-1">
+                    <span
+                      className="text-base text-rose-700 ml-1"
+                      key={plan.name}
+                    >
                       {frequency === "monthly" ? "/month" : "/year"}
                     </span>
                   )}
@@ -76,8 +79,8 @@ const Pricing = () => {
               <Card.Body className="pb-20">
                 {plan.activeFeatures && (
                   <ul>
-                    {plan.activeFeatures.map((feature) => (
-                      <li className="flex gap-2 items-start mb-4">
+                    {plan.activeFeatures.map((feature, index) => (
+                      <li className="flex gap-2 items-start mb-4" key={index}>
                         <CheckCircleIcon className="text-rose-700 h-3 w-3 mt-1 block" />
                         <span className="w-full">{feature.name}</span>
                       </li>

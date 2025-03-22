@@ -36,7 +36,7 @@ const Hero = () => {
           <img
             src={heroImg}
             alt="A perfect cup of coffee in the morning sun."
-            className="rounded-[2rem]"
+            className="rounded-[2rem] shadow-blue"
           />
         </div>
       </Container>

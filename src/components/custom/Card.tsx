@@ -8,9 +8,7 @@ export const Card: React.FC<CardProps> & {
   Heading: React.FC<CardProps>;
   Body: React.FC<CardProps>;
 } = ({ children, className, ...props }) => {
-  const classes = `bg-white shadow-md rounded-[1rem] overflow-hidden ${
-    className || ""
-  }`;
+  const classes = `bg-white rounded-[1rem] overflow-hidden ${className || ""}`;
 
   return (
     <div className={classes} {...props}>

@@ -4,6 +4,10 @@ import brewing from "../assets/images/brewing.svg";
 import integration from "../assets/images/integration.svg";
 import recommendation from "../assets/images/recommendation.svg";
 
+import carlos from "../assets/images/carlos.jpg";
+import rachel from "../assets/images/rachel.jpg";
+import lena from "../assets/images/lena.jpg";
+
 import { CheckCircleIcon } from "@heroicons/react/16/solid";
 
 export const HeroData = () => {
@@ -182,6 +186,81 @@ export const PricingData = () => {
         ],
         bestFor:
           "Coffee aficionados who demand the absolute best, with a coffee experience tailored to every sip.",
+      },
+    ],
+  };
+};
+
+export const FAQData = () => {
+  return {
+    heading: "Frequently Asked Questions",
+    content: (
+      <p>
+        Still curious about how BrewBuddy works? We’ve answered some of the most
+        common questions below to help you get started. From setup to
+        subscriptions, we’ve got your coffee questions covered.
+      </p>
+    ),
+    faqs: [
+      {
+        question: "How does BrewBuddy know what kind of coffee I like?",
+        answer:
+          "BrewBuddy learns your preferences over time by tracking your ratings, brewing habits, and flavor notes you enjoy most. The more you brew, the smarter it gets at recommending your perfect cup.",
+      },
+      {
+        question: "Do I need a specific coffee machine to use BrewBuddy?",
+        answer:
+          "Not at all! BrewBuddy is compatible with most popular machines, including drip brewers, espresso machines, and even pod-based systems. It connects via Wi-Fi or Bluetooth depending on your setup.",
+      },
+      {
+        question: "Can I customize my coffee subscription?",
+        answer:
+          "Absolutely. You can choose your favorite roast types, adjust delivery frequency, and even pause or skip shipments anytime—all from the BrewBuddy app.",
+      },
+      {
+        question: "What happens if I run out of beans before my next shipment?",
+        answer:
+          "BrewBuddy tracks your usage and adjusts your subscription accordingly. But if you ever need a refill sooner, you can request an express shipment with just a tap.",
+      },
+      {
+        question: "Is BrewBuddy available outside the U.S.?",
+        answer:
+          "Currently, BrewBuddy is only available in the U.S., but we’re actively working to expand internationally. Sign up for updates to be notified when we launch in your area.",
+      },
+    ],
+  };
+};
+
+export const TestimonialsData = () => {
+  return {
+    heading: "What Our Users Are Saying",
+    content: (
+      <p>
+        BrewBuddy has already helped coffee lovers across the country brew
+        smarter mornings. Here's what a few of them had to say.
+      </p>
+    ),
+    testimonials: [
+      {
+        name: "Lena M.",
+        title: "Freelance Designer",
+        quote:
+          "BrewBuddy totally changed my mornings. I used to skip coffee because I didn’t have time, but now it’s ready the second I’m up. Plus, I’m trying roasts I never would’ve picked myself!",
+        image: lena,
+      },
+      {
+        name: "Carlos R.",
+        title: "Startup Founder",
+        quote:
+          "I love how BrewBuddy syncs with my machine. The auto-scheduling is genius, and the bean subscription always keeps things fresh. It’s like having a barista that knows me.",
+        image: carlos,
+      },
+      {
+        name: "Rachel T.",
+        title: "Remote Developer",
+        quote:
+          "The personalization is next level. BrewBuddy figured out I like brighter, citrusy coffees and started recommending amazing ones. I’m hooked.",
+        image: rachel,
       },
     ],
   };

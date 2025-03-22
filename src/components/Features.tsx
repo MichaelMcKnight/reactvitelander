@@ -18,7 +18,7 @@ const Features = () => {
           {features.map((feature, index) => (
             <Card
               key={index}
-              className="flex gap-12 items-center md:w-[calc(50%-1rem)] py-8 px-12"
+              className="flex gap-12 items-center md:w-[calc(50%-1rem)] py-8 px-12 shadow-lg"
             >
               <img
                 src={feature.icon}
@@ -26,7 +26,7 @@ const Features = () => {
                 className="h-20 w-auto my-4"
               />
               <div>
-                <h3 className="text-rose-700">{feature.heading}</h3>
+                <h3 className="text-rose-700 mb-2">{feature.heading}</h3>
                 {feature.content}
               </div>
             </Card>

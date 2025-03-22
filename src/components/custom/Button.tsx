@@ -22,7 +22,7 @@ const Button: React.FC<ButtonProps> = ({
   className,
   ...props
 }) => {
-  const classes = `px-8 py-2 rounded-full font-semibold ${
+  const classes = `px-8 py-2 rounded-full font-semibold cursor-pointer ${
     buttonStyles[variant]
   } ${className || ""}`;
 
