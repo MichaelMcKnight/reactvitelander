@@ -1,4 +1,4 @@
-import Button from "../custom/Button";
+import { buttonVariants } from "@/components/ui/button";
 
 const Nav = () => {
   return (
@@ -25,9 +25,12 @@ const Nav = () => {
           </a>
         </li>
         <li>
-          <Button as="a" variant="secondary" href="#get-brewing">
+          <a
+            href="#get-brewing"
+            className={buttonVariants({ variant: "secondary" })}
+          >
             Get Brewing
-          </Button>
+          </a>
         </li>
       </ul>
     </nav>

@@ -1,8 +1,8 @@
 import { useState } from "react";
 
-import { Card } from "./custom/Card";
+import { Card, CardHeader, CardContent } from "./ui/card";
 import Container from "./custom/Container";
-import Button from "./custom/Button";
+import { Button } from "./ui/button";
 
 import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
@@ -52,14 +52,14 @@ const Pricing = () => {
             </RadioGroup>
           </fieldset>
         </div>
-        <div className="grid md:grid-cols-3 gap-12">
+        <div className="grid xl:grid-cols-3 gap-12">
           {plans.map((plan, index) => (
             <Card
               key={index}
-              className="text-sm border-[1px] border-rose-700 relative shadow-blue"
+              className="text-sm border-[1px] border-rose-700 relative shadow-blue md:max-w-xl md:mx-auto"
             >
-              <Card.Heading className="bg-indigo-50">
-                <h2 className="text-rose-700 text-base uppercase tracking-wider">
+              <CardHeader className="border-b-[1px] border-rose-700 px-8">
+                <h2 className="text-rose-700 text-base uppercase tracking-wider mb-1">
                   {plan.name}
                 </h2>
                 <p className="text-5xl font-semibold">
@@ -75,8 +75,8 @@ const Pricing = () => {
                     </span>
                   )}
                 </p>
-              </Card.Heading>
-              <Card.Body className="pb-20">
+              </CardHeader>
+              <CardContent className="pb-12 px-8">
                 {plan.activeFeatures && (
                   <ul>
                     {plan.activeFeatures.map((feature, index) => (
@@ -89,7 +89,7 @@ const Pricing = () => {
                       plan.inactiveFeatures.map((feature, index) => (
                         <li
                           key={index}
-                          className="flex gap-2 items-start mb-4 opacity-60"
+                          className="flex gap-2 items-start mb-4 opacity-30"
                         >
                           <CheckCircleIcon className="h-3 w-3 mt-1 block" />
                           <span className="w-full">{feature.name}</span>
@@ -115,11 +115,11 @@ const Pricing = () => {
                     }
                   }}
                   data-target="#get-brewing"
-                  className="absolute bottom-4 left-12 w-[calc(100%-6rem)]"
+                  className="absolute bottom-6 left-8 w-[calc(100%-4rem)]"
                 >
                   {plan.name === "Basic" ? "Download Now" : "Start Free Trial"}
                 </Button>
-              </Card.Body>
+              </CardContent>
             </Card>
           ))}
         </div>

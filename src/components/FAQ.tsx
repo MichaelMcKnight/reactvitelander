@@ -23,7 +23,9 @@ const FAQ = () => {
                 <AccordionTrigger className="text-xl aria-expanded:text-rose-500 border-b-[1px] border-zinc-600 rounded-none">
                   {item.question}
                 </AccordionTrigger>
-                <AccordionContent>{item.answer}</AccordionContent>
+                <AccordionContent className="leading-loose">
+                  {item.answer}
+                </AccordionContent>
               </AccordionItem>
             </Accordion>
           ))}

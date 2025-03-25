@@ -1,4 +1,4 @@
-import Button from "./custom/Button";
+import { Button } from "./ui/button";
 import Container from "./custom/Container";
 
 import { HeroData } from "@/data/data";

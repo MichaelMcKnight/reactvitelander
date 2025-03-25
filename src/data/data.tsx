@@ -265,3 +265,36 @@ export const TestimonialsData = () => {
     ],
   };
 };
+
+export const GetStartedData = () => {
+  return {
+    heading: "Ready to Brew Smarter?",
+    content: (
+      <>
+        <p>
+          Getting started with BrewBuddy is easy. Sign up, connect your machine,
+          and personalize your preferences to start receiving perfectly matched
+          beans and smarter brews—every single time.
+        </p>
+        <ul className="mt-4 space-y-2">
+          <li className="flex gap-2 items-start">
+            <CheckCircleIcon className="text-rose-700 h-4 w-auto mt-2" />
+            Quick setup with your favorite coffee machine
+          </li>
+          <li className="flex gap-2 items-start">
+            <CheckCircleIcon className="text-rose-700 h-4 w-auto mt-2" />
+            Personalized taste profile built around your preferences
+          </li>
+          <li className="flex gap-2 items-start">
+            <CheckCircleIcon className="text-rose-700 h-4 w-auto mt-2" />
+            Smart delivery that adapts to your consumption
+          </li>
+          <li className="flex gap-2 items-start">
+            <CheckCircleIcon className="text-rose-700 h-4 w-auto mt-2" />
+            Brew automation from anywhere using the app
+          </li>
+        </ul>
+      </>
+    ),
+  };
+};

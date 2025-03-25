@@ -1,5 +1,5 @@
 import Container from "./custom/Container";
-import { Card } from "./custom/Card";
+import { Card, CardContent } from "./ui/card";
 import { FeaturesData } from "@/data/data";
 
 const Features = () => {
@@ -16,19 +16,18 @@ const Features = () => {
         </div>
         <div className="flex flex-wrap justify-center gap-8">
           {features.map((feature, index) => (
-            <Card
-              key={index}
-              className="flex gap-12 items-center md:w-[calc(50%-1rem)] py-8 px-12 shadow-lg"
-            >
-              <img
-                src={feature.icon}
-                alt={feature.heading}
-                className="h-20 w-auto my-4"
-              />
-              <div>
-                <h3 className="text-rose-700 mb-2">{feature.heading}</h3>
-                {feature.content}
-              </div>
+            <Card key={index} className="md:w-[calc(50%-1rem)]">
+              <CardContent className="xl:flex gap-12 items-center">
+                <img
+                  src={feature.icon}
+                  alt={feature.heading}
+                  className="h-20 w-auto my-4"
+                />
+                <div>
+                  <h3 className="text-rose-700 mb-2">{feature.heading}</h3>
+                  {feature.content}
+                </div>
+              </CardContent>
             </Card>
           ))}
         </div>

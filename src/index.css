@@ -171,3 +171,11 @@
   top: calc(100% + 30px) !important;
   background: #be123c !important;
 }
+
+.splide__arrow--next {
+  right: 0 !important;
+}
+
+.splide__arrow--prev {
+  left: 0 !important;
+}

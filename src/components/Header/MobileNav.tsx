@@ -4,7 +4,7 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
-import Button from "../custom/Button";
+import { buttonVariants } from "@/components/ui/button";
 
 import "hamburgers/dist/hamburgers.min.css";
 
@@ -56,9 +56,12 @@ const MobileNav = () => {
               </a>
             </li>
             <li className="mt-4">
-              <Button as="a" variant="secondary" href="#get-brewing">
+              <a
+                href="#get-brewing"
+                className={buttonVariants({ variant: "secondary" })}
+              >
                 Get Brewing
-              </Button>
+              </a>
             </li>
           </ul>
         </PopoverContent>

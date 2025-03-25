@@ -4,6 +4,7 @@ import Features from "./components/Features";
 import Pricing from "./components/pricing";
 import FAQ from "./components/FAQ";
 import Testimonials from "./components/Testimonials";
+import GetStarted from "./components/GetStarted";
 import Footer from "./components/Footer";
 
 const App = () => {
@@ -19,6 +20,7 @@ const App = () => {
         <Pricing />
         <FAQ />
         <Testimonials />
+        <GetStarted />
       </main>
       <Footer />
     </>
