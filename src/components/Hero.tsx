@@ -12,7 +12,7 @@ const Hero = () => {
   return (
     <section
       className="min-h-[500px] lg:min-h-[calc(100vh-64px)] grid place-content-center bg-radial-[at_0%_0%] from-indigo-200 to-white to-75% py-12"
-      id="#brew-buddy"
+      id="brew-buddy"
     >
       <Container
         size="lg"
