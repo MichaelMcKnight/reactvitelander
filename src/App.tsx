@@ -1,3 +1,4 @@
+import { LazyMotion, domAnimation } from "framer-motion";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import Features from "./components/Features";
@@ -9,7 +10,7 @@ import Footer from "./components/Footer";
 
 const App = () => {
   return (
-    <>
+    <LazyMotion features={domAnimation}>
       <a className="sr-only focus:not-sr-only" href="#main">
         Skip to content.
       </a>
@@ -23,7 +24,7 @@ const App = () => {
         <GetStarted />
       </main>
       <Footer />
-    </>
+    </LazyMotion>
   );
 };
 

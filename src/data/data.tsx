@@ -104,19 +104,21 @@ export const FeaturesData = () => {
             <ul>
               <li className="flex gap-2 items-start">
                 <CheckCircleIcon className="text-rose-700 h-4 w-auto mt-2" />{" "}
-                Your coffee is ready to drink
+                <span className="w-full">Your coffee is ready to drink</span>
               </li>
               <li className="flex gap-2 items-start">
                 <CheckCircleIcon className="text-rose-700 h-4 w-auto mt-2" />{" "}
-                Water or beans are running low
+                <span className="w-full">Water or beans are running low</span>
               </li>
               <li className="flex gap-2 items-start">
                 <CheckCircleIcon className="text-rose-700 h-4 w-auto mt-2" />{" "}
-                Your machine needs cleaning
+                <span className="w-full">Your machine needs cleaning</span>
               </li>
               <li className="flex gap-2 items-start">
                 <CheckCircleIcon className="text-rose-700 h-4 w-auto mt-2" />{" "}
-                New, limited-edition blends are available
+                <span className="w-full">
+                  New, limited-edition blends are available
+                </span>
               </li>
             </ul>
           </>
@@ -172,7 +174,7 @@ export const PricingData = () => {
       },
       {
         name: "Pro",
-        prices: { monthly: "$19.99", annually: "199.99" },
+        prices: { monthly: "$19.99", annually: "$199.99" },
         description:
           "The ultimate coffee experience—fully automated brewing and premium perks.",
         activeFeatures: [
@@ -278,20 +280,28 @@ export const GetStartedData = () => {
         </p>
         <ul className="mt-4 space-y-2">
           <li className="flex gap-2 items-start">
-            <CheckCircleIcon className="text-rose-700 h-4 w-auto mt-2" />
-            Quick setup with your favorite coffee machine
+            <CheckCircleIcon className="text-rose-700 h-4 w-4 mt-2" />
+            <span className="w-full">
+              Quick setup with your favorite coffee machine
+            </span>
           </li>
           <li className="flex gap-2 items-start">
-            <CheckCircleIcon className="text-rose-700 h-4 w-auto mt-2" />
-            Personalized taste profile built around your preferences
+            <CheckCircleIcon className="text-rose-700 h-4 w-4 mt-2" />
+            <span className="w-full">
+              Personalized taste profile built around your preferences
+            </span>
           </li>
           <li className="flex gap-2 items-start">
-            <CheckCircleIcon className="text-rose-700 h-4 w-auto mt-2" />
-            Smart delivery that adapts to your consumption
+            <CheckCircleIcon className="text-rose-700 h-4 w-4 mt-2" />
+            <span className="w-full">
+              Smart delivery that adapts to your consumption
+            </span>
           </li>
           <li className="flex gap-2 items-start">
-            <CheckCircleIcon className="text-rose-700 h-4 w-auto mt-2" />
-            Brew automation from anywhere using the app
+            <CheckCircleIcon className="text-rose-700 h-4 w-4 mt-2" />
+            <span className="w-full">
+              Brew automation from anywhere using the app
+            </span>
           </li>
         </ul>
       </>
