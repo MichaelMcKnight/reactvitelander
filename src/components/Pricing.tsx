@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
+import { useTier } from "@/context/PricingTierContext";
+
 import { Card, CardHeader, CardContent } from "@/components/ui/card";
 import Container from "@/components/custom/Container";
 import { Button } from "@/components/ui/button";
@@ -23,6 +25,8 @@ const Pricing = () => {
   const [frequency, setFrequency] = useState("monthly");
 
   const { heading, content, plans } = PricingData();
+
+  const { setSelectedTier } = useTier();
 
   return (
     <section id="pricing" className="py-12">
@@ -137,6 +141,7 @@ const Pricing = () => {
                     onClick={(e) => {
                       const target =
                         e.currentTarget.getAttribute("data-target");
+                      setSelectedTier(plan.name as "Basic" | "Premium" | "Pro"); // 👈
                       if (target) {
                         window.location.href = target;
                       }

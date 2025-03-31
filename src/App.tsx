@@ -1,4 +1,5 @@
 import { lazy, Suspense } from "react";
+import { TierProvider } from "@/context/PricingTierContext";
 import { LazyMotion, domAnimation } from "framer-motion";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
@@ -11,23 +12,27 @@ const Footer = lazy(() => import("@/components/Footer"));
 
 const App = () => {
   return (
-    <LazyMotion features={domAnimation}>
-      <a className="sr-only focus:not-sr-only" href="#main">
-        Skip to content.
-      </a>
-      <Suspense fallback={<div className="p-8 text-center">Loading...</div>}>
+    <TierProvider>
+      <LazyMotion features={domAnimation}>
+        <a className="sr-only focus:not-sr-only" href="#main">
+          Skip to content.
+        </a>
         <Header />
         <main id="main">
           <Hero />
-          <Features />
-          <Pricing />
-          <FAQ />
-          <Testimonials />
-          <GetStarted />
+          <Suspense
+            fallback={<div className="p-8 text-center">Loading...</div>}
+          >
+            <Features />
+            <Pricing />
+            <FAQ />
+            <Testimonials />
+            <GetStarted />
+          </Suspense>
         </main>
         <Footer />
-      </Suspense>
-    </LazyMotion>
+      </LazyMotion>
+    </TierProvider>
   );
 };
 

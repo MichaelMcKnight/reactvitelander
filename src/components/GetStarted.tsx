@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { useTier } from "@/context/PricingTierContext";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
@@ -38,6 +39,7 @@ const GetStarted = () => {
     handleSubmit,
     formState: { errors },
     setValue,
+    watch,
   } = useForm<FormValues>({
     resolver: zodResolver(formSchema),
   });
@@ -49,6 +51,15 @@ const GetStarted = () => {
     setFirstName(data.firstName);
     setSubmitted(true);
   };
+
+  const { selectedTier: tierFromContext } = useTier();
+  const selectedTier = watch("tier");
+
+  useEffect(() => {
+    if (tierFromContext) {
+      setValue("tier", tierFromContext);
+    }
+  }, [tierFromContext, setValue]);
 
   return (
     <section id="get-brewing" className="pt-20 pb-12 bg-indigo-100">
@@ -148,6 +159,7 @@ const GetStarted = () => {
                         Tier
                       </Label>
                       <Select
+                        value={selectedTier}
                         onValueChange={(value) =>
                           setValue("tier", value as FormValues["tier"])
                         }
