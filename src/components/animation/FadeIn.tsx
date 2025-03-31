@@ -10,7 +10,6 @@ type FadeInProps = {
   className?: string;
   distance?: number;
   once?: boolean;
-  threshold?: number;
 };
 
 export default function FadeIn({
@@ -21,10 +20,9 @@ export default function FadeIn({
   className = "",
   distance = 50,
   once = true,
-  threshold = 0.1,
 }: FadeInProps) {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once, threshold });
+  const isInView = useInView(ref, { once });
 
   const directionMap = {
     up: { y: distance },

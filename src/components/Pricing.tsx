@@ -1,16 +1,16 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-import { Card, CardHeader, CardContent } from "./ui/card";
-import Container from "./custom/Container";
+import { Card, CardHeader, CardContent } from "@/components/ui/card";
+import Container from "@/components/custom/Container";
 import { Button } from "@/components/ui/button";
 
 import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { CheckCircleIcon } from "@heroicons/react/16/solid";
-import FadeIn from "./animation/FadeIn";
-import StaggerContainer from "./animation/StaggerContainer";
-import StaggerItem from "./animation/StaggerItem";
+import FadeIn from "@/components/animation/FadeIn";
+import StaggerContainer from "@/components/animation/StaggerContainer";
+import StaggerItem from "@/components/animation/StaggerItem";
 
 import { PricingData } from "@/data/data";
 

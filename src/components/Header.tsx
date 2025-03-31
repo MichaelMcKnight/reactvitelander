@@ -1,7 +1,7 @@
-import Logo from "./Header/Logo";
-import Nav from "./Header/Nav";
-import MobileNav from "./Header/MobileNav";
-import Container from "./custom/Container";
+import Logo from "@/components/Header/Logo";
+import Nav from "@/components/Header/Nav";
+import MobileNav from "@/components/Header/MobileNav";
+import Container from "@/components/custom/Container";
 
 const Header = () => {
   return (

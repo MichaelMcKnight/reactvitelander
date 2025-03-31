@@ -8,7 +8,6 @@ type StaggerContainerProps = {
   staggerChildren?: number;
   className?: string;
   once?: boolean;
-  threshold?: number;
 };
 
 export default function StaggerContainer({
@@ -17,10 +16,9 @@ export default function StaggerContainer({
   staggerChildren = 0.1,
   className = "",
   once = true,
-  threshold = 0.1,
 }: StaggerContainerProps) {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once, threshold });
+  const isInView = useInView(ref, { once });
 
   const container = {
     hidden: { opacity: 0 },

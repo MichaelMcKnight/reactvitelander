@@ -1,10 +1,10 @@
 import { Button } from "@/components/ui/button";
-import Container from "./custom/Container";
-import FadeIn from "./animation/FadeIn";
+import Container from "@/components/custom/Container";
+import FadeIn from "@/components/animation/FadeIn";
 
 import { HeroData } from "@/data/data";
 
-import heroImg from "../assets/images/perfect-cup.jpg";
+import heroImg from "@/assets/images/perfect-cup.jpg";
 
 const Hero = () => {
   const { heading, content } = HeroData();

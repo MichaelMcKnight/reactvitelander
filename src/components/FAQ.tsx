@@ -1,4 +1,4 @@
-import Container from "./custom/Container";
+import Container from "@/components/custom/Container";
 import {
   Accordion,
   AccordionContent,
@@ -6,7 +6,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { FAQData } from "@/data/data";
-import FadeIn from "./animation/FadeIn";
+import FadeIn from "@/components/animation/FadeIn";
 import { motion } from "framer-motion";
 
 const FAQ = () => {

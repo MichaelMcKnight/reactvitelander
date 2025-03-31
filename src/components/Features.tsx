@@ -1,9 +1,9 @@
-import Container from "./custom/Container";
-import { Card, CardContent } from "./ui/card";
+import Container from "@/components/custom/Container";
+import { Card, CardContent } from "@/components/ui/card";
 import { FeaturesData } from "@/data/data";
-import StaggerContainer from "./animation/StaggerContainer";
-import StaggerItem from "./animation/StaggerItem";
-import FadeIn from "./animation/FadeIn";
+import StaggerContainer from "@/components/animation/StaggerContainer";
+import StaggerItem from "@/components/animation/StaggerItem";
+import FadeIn from "@/components/animation/FadeIn";
 
 const Features = () => {
   const { heading, content, features } = FeaturesData();

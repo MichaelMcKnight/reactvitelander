@@ -1,12 +1,13 @@
+import { lazy, Suspense } from "react";
 import { LazyMotion, domAnimation } from "framer-motion";
-import Header from "./components/Header";
-import Hero from "./components/Hero";
-import Features from "./components/Features";
-import Pricing from "./components/pricing";
-import FAQ from "./components/FAQ";
-import Testimonials from "./components/Testimonials";
-import GetStarted from "./components/GetStarted";
-import Footer from "./components/Footer";
+import Header from "@/components/Header";
+import Hero from "@/components/Hero";
+const Features = lazy(() => import("@/components/Features"));
+const Pricing = lazy(() => import("@/components/Pricing"));
+const FAQ = lazy(() => import("@/components/FAQ"));
+const Testimonials = lazy(() => import("@/components/Testimonials"));
+const GetStarted = lazy(() => import("@/components/GetStarted"));
+const Footer = lazy(() => import("@/components/Footer"));
 
 const App = () => {
   return (
@@ -14,16 +15,18 @@ const App = () => {
       <a className="sr-only focus:not-sr-only" href="#main">
         Skip to content.
       </a>
-      <Header />
-      <main id="main">
-        <Hero />
-        <Features />
-        <Pricing />
-        <FAQ />
-        <Testimonials />
-        <GetStarted />
-      </main>
-      <Footer />
+      <Suspense fallback={<div className="p-8 text-center">Loading...</div>}>
+        <Header />
+        <main id="main">
+          <Hero />
+          <Features />
+          <Pricing />
+          <FAQ />
+          <Testimonials />
+          <GetStarted />
+        </main>
+        <Footer />
+      </Suspense>
     </LazyMotion>
   );
 };

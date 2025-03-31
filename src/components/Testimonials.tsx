@@ -2,8 +2,8 @@ import { Splide, SplideTrack, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
 import { motion } from "framer-motion";
 
-import Quote from "./Quote";
-import FadeIn from "./animation/FadeIn";
+import Quote from "@/components/Quote";
+import FadeIn from "@/components/animation/FadeIn";
 
 import { TestimonialsData } from "@/data/data";
 

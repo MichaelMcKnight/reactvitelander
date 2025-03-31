@@ -16,8 +16,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import { CheckCircleIcon } from "@heroicons/react/16/solid";
 import { motion, AnimatePresence } from "framer-motion";
 
-import Container from "./custom/Container";
-import FadeIn from "./animation/FadeIn";
+import Container from "@/components/custom/Container";
+import FadeIn from "@/components/animation/FadeIn";
 
 import { GetStartedData } from "@/data/data";
 
